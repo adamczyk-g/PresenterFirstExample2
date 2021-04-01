@@ -30,21 +30,11 @@ namespace PresenterFirstExample1.Presenter
         {
             FormData formData = view.FormData;
             EmailData emailData = view.EmailData;
-            Notification validationResult = model.ValidateForm(formData, emailData);
+            Results results = model.TryEmailFormAsPdf(formData, emailData);
 
             view.ClearValidationError();
-
-            if (validationResult.HasErrors)
-            {
-                view.DisplayValidationResult(validationResult.Messages); // Determines the message and shows it on the View
-                return;
-            }
-
-            Pdf pdf = model.GeneratePdf(formData);
-
-            EmailSendingResult sendingResult = model.EmailFile(emailData, pdf);
-
-            view.DisplayEmailError(sendingResult.Message);
+            view.DisplayValidationResult(results.ValidationResult);
+            view.DisplayEmailError(results.SendingResult);
         }
     }
 }

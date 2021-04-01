@@ -51,6 +51,7 @@
     <Compile Include="EmailData.cs" />
     <Compile Include="EmailSendingResult.cs" />
     <Compile Include="EmailValidator.cs" />
+    <Compile Include="Results.cs" />
     <Compile Include="SimpleEmailValidator.cs" />
     <Compile Include="FormData.cs" />
     <Compile Include="FormModel.cs" />

@@ -21,12 +21,6 @@ namespace PresenterFirstExample1.Model
         {
             this.formValidator = formValidator;
         }
-
-        public Notification ValidateForm(FormData formData, EmailData emailData)
-        {
-            return formValidator.Validate(formData, emailData);
-        }
-
         public FormData DefaultFormData
         {
             get
@@ -37,7 +31,26 @@ namespace PresenterFirstExample1.Model
             }
         }
 
-        public Pdf GeneratePdf(FormData formData)
+        public Results TryEmailFormAsPdf(FormData formData, EmailData emailData)
+        {
+            Notification validationResult = ValidateForm(formData, emailData);
+            EmailSendingResult sendingResult = new EmailSendingResult(string.Empty);
+
+            if (validationResult.HasErrors == false)
+            {
+                Pdf pdf = GeneratePdf(formData);
+                sendingResult = EmailFile(emailData, pdf);
+            }
+
+            return new Results(validationResult, sendingResult);
+        }
+
+        private Notification ValidateForm(FormData formData, EmailData emailData)
+        {
+            return formValidator.Validate(formData, emailData);
+        }
+
+        private Pdf GeneratePdf(FormData formData)
         {
             string text = "first name: " + formData.FirstName + Environment.NewLine + Environment.NewLine +
                 "last name: " + formData.LastName + Environment.NewLine + Environment.NewLine +
@@ -60,7 +73,7 @@ namespace PresenterFirstExample1.Model
             return new Pdf("myDocument.pdf");
         }
 
-        public EmailSendingResult EmailFile(EmailData email, Pdf pdf)
+        private EmailSendingResult EmailFile(EmailData email, Pdf pdf)
         {
             string emailFrom = "notify@mvptest.com.pl";
             string displayName = "PresenterFirst_example_1";
