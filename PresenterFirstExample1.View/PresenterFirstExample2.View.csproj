@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5D270AC9-E09A-42AF-B6B0-DE034A4EA6AF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PresenterFirstExample1.View</RootNamespace>
-    <AssemblyName>PresenterFirstExample1.View</AssemblyName>
+    <RootNamespace>PresenterFirstExample2.View</RootNamespace>
+    <AssemblyName>PresenterFirstExample2.View</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -64,6 +64,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -79,13 +80,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PresenterFirstExample1.Model\PresenterFirstExample1.Model.csproj">
+    <ProjectReference Include="..\PresenterFirstExample1.Model\PresenterFirstExample2.Model.csproj">
       <Project>{bd9c01e9-8389-45e4-ad79-2faeace271d2}</Project>
-      <Name>PresenterFirstExample1.Model</Name>
+      <Name>PresenterFirstExample2.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PresenterFirstExample1.Presenter\PresenterFirstExample1.Presenter.csproj">
+    <ProjectReference Include="..\PresenterFirstExample1.Presenter\PresenterFirstExample2.Presenter.csproj">
       <Project>{c2f2b6f9-8d2f-4724-bf1b-abf1b6c2de00}</Project>
-      <Name>PresenterFirstExample1.Presenter</Name>
+      <Name>PresenterFirstExample2.Presenter</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

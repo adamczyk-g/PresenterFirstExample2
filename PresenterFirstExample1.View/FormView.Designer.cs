@@ -202,7 +202,7 @@
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.label1);
             this.Name = "FormView";
-            this.Text = "MVP Presenter First Example number 1";
+            this.Text = "MVP Presenter First Example number 2";
             this.Load += new System.EventHandler(this.FormView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -9,8 +9,8 @@
     <ProjectGuid>{8EDF4429-251A-416D-BB68-93F227191BCF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PresenterFirstExample1.Model.Tests</RootNamespace>
-    <AssemblyName>PresenterFirstExample1.Model.Tests</AssemblyName>
+    <RootNamespace>PresenterFirstExample2.Model.Tests</RootNamespace>
+    <AssemblyName>PresenterFirstExample2.Model.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PresenterFirstExample1.Model\PresenterFirstExample1.Model.csproj">
+    <ProjectReference Include="..\PresenterFirstExample1.Model\PresenterFirstExample2.Model.csproj">
       <Project>{bd9c01e9-8389-45e4-ad79-2faeace271d2}</Project>
-      <Name>PresenterFirstExample1.Model</Name>
+      <Name>PresenterFirstExample2.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
